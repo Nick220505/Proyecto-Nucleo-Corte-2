@@ -222,6 +222,9 @@
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="material-icons py-2">settings</i>
     </a>
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2" data-bs-toggle="modal" data-bs-target="#notificationModal" style="right: auto; left: 28px;">
+      <i class="material-icons py-2">notifications</i>
+    </a>
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3">
         <div class="float-start">
@@ -248,12 +251,123 @@
       </div>
     </div>
   </div>
+  <!-- Notification Modal -->
+<div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid py-4">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="alert alert-primary alert-dismissible text-white" role="alert">
+                <span class="text-sm">Processed 20 Kg of organic waste and pet waste. Calculated compost (fertilizer) and water usage.</span>
+                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="alert alert-secondary alert-dismissible text-white" role="alert">
+                <span class="text-sm">System alert: Reactor protection system activated.</span>
+                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="alert alert-success alert-dismissible text-white" role="alert">
+                <span class="text-sm">Web Application: Exclusive access granted to the manager.</span>
+                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="alert alert-danger alert-dismissible text-white" role="alert">
+                <span class="text-sm">Remote Start: Remote start permission granted only to the manager.</span>
+                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="alert alert-warning alert-dismissible text-white" role="alert">
+                <span class="text-sm">Real-time Monitoring: Machine uptime in minutes and hours. Energy consumption: electricity, gas, and water. Weight processed: up to 20Kg. Daily, weekly, and monthly graphs available.</span>
+                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="position-fixed bottom-1 end-1 z-index-2">
+            <div class="toast fade hide p-2 bg-white" role="alert" aria-live="assertive" id="successToast" aria-atomic="true">
+              <div class="toast-header border-0">
+                <i class="material-icons text-success me-2">
+            check
+          </i>
+                <span class="me-auto font-weight-bold">BitBy Dashboard</span>
+                <small class="text-body">11 mins ago</small>
+                <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
+              </div>
+              <hr class="horizontal dark m-0">
+              <div class="toast-body">
+                Processed 20 Kg.
+              </div>
+            </div>
+            <div class="toast fade hide p-2 mt-2 bg-gradient-info" role="alert" aria-live="assertive" id="infoToast" aria-atomic="true">
+              <div class="toast-header bg-transparent border-0">
+                <i class="material-icons text-white me-2">
+            notifications
+          </i>
+                <span class="me-auto text-white font-weight-bold">BitBy Dashboard</span>
+                <small class="text-white">11 mins ago</small>
+                <i class="fas fa-times text-md text-white ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
+              </div>
+              <hr class="horizontal light m-0">
+              <div class="toast-body text-white">
+                Organic and Pet Waste Processed.
+              </div>
+            </div>
+            <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="warningToast" aria-atomic="true">
+              <div class="toast-header border-0">
+                <i class="material-icons text-warning me-2">
+            travel_explore
+          </i>
+                <span class="me-auto font-weight-bold">BitBy Dashboard</span>
+                <small class="text-body">11 mins ago</small>
+                <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
+              </div>
+              <hr class="horizontal dark m-0">
+              <div class="toast-body">
+                Reactor protection System Activated.
+              </div>
+            </div>
+            <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true">
+              <div class="toast-header border-0">
+                <i class="material-icons text-danger me-2">
+            campaign
+          </i>
+                <span class="me-auto text-gradient text-danger font-weight-bold">BitBy Dashboard</span>
+                <small class="text-body">11 mins ago</small>
+                <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
+              </div>
+              <hr class="horizontal dark m-0">
+              <div class="toast-body">
+                Exclusive Web Application Access Granted.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script>
+
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {
@@ -565,3 +679,5 @@
 </body>
 
 </html>
+
+
